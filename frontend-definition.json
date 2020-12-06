@@ -10,6 +10,12 @@
       }
     ],
     "memory": 768,
-    "cpu": 1024
+    "cpu": 1024,
+    "environment": [
+      {
+        "name": "BACKEND_PORT",
+        "value": "tcp://{aws_elb.backend-dns_name}:4567"
+      }
+    ]
   }
 ]
