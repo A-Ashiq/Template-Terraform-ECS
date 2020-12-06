@@ -1,0 +1,15 @@
+[
+  {
+    "name": "backend",
+    "image": "brikis98/rails-backend:v1",
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 4567,
+        "hostPort": 4567
+      }
+    ],
+    "memory": 768,
+    "cpu": 1024
+  }
+]
