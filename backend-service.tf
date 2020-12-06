@@ -3,4 +3,10 @@ resource "aws_ecs_service" "backend" {
   task_definition = aws_ecs_task_definition.backend.arn
   desired_count = 2
   name = "backend"
+
+  load_balancer {
+    elb_name = aws_elb.backend.id
+    container_name = "backend"
+    container_port = 4567
+  }
 }
